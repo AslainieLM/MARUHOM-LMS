@@ -1,0 +1,348 @@
+ERROR - 2025-10-17 13:04:57 --> mysqli_sql_exception: Unknown column 'instructor_ids' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(600): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->manageCourses()
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-10-17 13:04:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'instructor_ids' in 'field list'
+[Method: POST, Route: admin/manage_courses]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `courses` (`title`, `course_code`, `instructor_ids`, `category`, `credits`, `duration_weeks`, `max_students`, `start_date`, `end_date`, `status`, `description`, `created_at`, `updated_at`) VALUES (:title:, :course_code:, :instructor_ids:, :category:, :credits:, :duration_weeks:, :max_students:, :start_date:, :end_date:, :status:, :description:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Controllers\Auth.php(600): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->manageCourses()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-17 13:04:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'instructor_ids' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `courses` (`title`, `course_code`, `instructor_ids`, `category`, `credits`, `duration_weeks`, `max_students`, `start_date`, `end_date`, `status`, `description`, `created_at`, `updated_at`) VALUES (\'SAD\', \'SAD123\', \'[4,2]\', \'Computer Science\', \'3\', 16, \'10\', \'2025-10-17\', \'2025-10-17\', \'active\', \'SAD\', \'2025-10-17 13:04:57\', \'2025-10-17 13:04:57\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `courses` (`title`, `course_code`, `instructor_ids`, `category`, `credits`, `duration_weeks`, `max_students`, `start_date`, `end_date`, `status`, `description`, `created_at`, `updated_at`) VALUES (\'SAD\', \'SAD123\', \'[4,2]\', \'Computer Science\', \'3\', 16, \'10\', \'2025-10-17\', \'2025-10-17\', \'active\', \'SAD\', \'2025-10-17 13:04:57\', \'2025-10-17 13:04:57\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `courses` (`title`, `course_code`, `instructor_ids`, `category`, `credits`, `duration_weeks`, `max_students`, `start_date`, `end_date`, `status`, `description`, `created_at`, `updated_at`) VALUES (:title:, :course_code:, :instructor_ids:, :category:, :credits:, :duration_weeks:, :max_students:, :start_date:, :end_date:, :status:, :description:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Controllers\Auth.php(600): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->manageCourses()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-17 13:04:57 --> [Caused by] mysqli_sql_exception: Unknown column 'instructor_ids' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `courses` (`title`, `course_code`, `instructor_ids`, `category`, `credits`, `duration_weeks`, `max_students`, `start_date`, `end_date`, `status`, `description`, `created_at`, `updated_at`) VALUES (\'SAD\', \'SAD123\', \'[4,2]\', \'Computer Science\', \'3\', 16, \'10\', \'2025-10-17\', \'2025-10-17\', \'active\', \'SAD\', \'2025-10-17 13:04:57\', \'2025-10-17 13:04:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `courses` (`title`, `course_code`, `instructor_ids`, `category`, `credits`, `duration_weeks`, `max_students`, `start_date`, `end_date`, `status`, `description`, `created_at`, `updated_at`) VALUES (\'SAD\', \'SAD123\', \'[4,2]\', \'Computer Science\', \'3\', 16, \'10\', \'2025-10-17\', \'2025-10-17\', \'active\', \'SAD\', \'2025-10-17 13:04:57\', \'2025-10-17 13:04:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `courses` (`title`, `course_code`, `instructor_ids`, `category`, `credits`, `duration_weeks`, `max_students`, `start_date`, `end_date`, `status`, `description`, `created_at`, `updated_at`) VALUES (\'SAD\', \'SAD123\', \'[4,2]\', \'Computer Science\', \'3\', 16, \'10\', \'2025-10-17\', \'2025-10-17\', \'active\', \'SAD\', \'2025-10-17 13:04:57\', \'2025-10-17 13:04:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `courses` (`title`, `course_code`, `instructor_ids`, `category`, `credits`, `duration_weeks`, `max_students`, `start_date`, `end_date`, `status`, `description`, `created_at`, `updated_at`) VALUES (:title:, :course_code:, :instructor_ids:, :category:, :credits:, :duration_weeks:, :max_students:, :start_date:, :end_date:, :status:, :description:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Controllers\Auth.php(600): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-17 13:31:57 --> ErrorException: Array to string conversion
+[Method: GET, Route: teacher/courses]
+in APPPATH\Views\teacher\courses.php on line 96.
+ 1 APPPATH\Views\teacher\courses.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\teacher\\courses.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\teacher\\courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('teacher/courses', [], true)
+ 5 APPPATH\Controllers\Auth.php(970): view('teacher/courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->teacherCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-17 13:32:00 --> ErrorException: Array to string conversion
+[Method: GET, Route: teacher/courses]
+in APPPATH\Views\teacher\courses.php on line 96.
+ 1 APPPATH\Views\teacher\courses.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\teacher\\courses.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\teacher\\courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('teacher/courses', [], true)
+ 5 APPPATH\Controllers\Auth.php(970): view('teacher/courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->teacherCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-17 13:32:03 --> ErrorException: Array to string conversion
+[Method: GET, Route: teacher/courses]
+in APPPATH\Views\teacher\courses.php on line 96.
+ 1 APPPATH\Views\teacher\courses.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\teacher\\courses.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\teacher\\courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('teacher/courses', [], true)
+ 5 APPPATH\Controllers\Auth.php(970): view('teacher/courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->teacherCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-17 13:55:53 --> mysqli_sql_exception: Unknown column 'c.instructor_id' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id`...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id`...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id`...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id`...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Models\EnrollmentModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(259): App\Models\EnrollmentModel->getUserEnrollments('5')
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-17 13:55:53 --> Failed to fetch user enrollments: Unknown column 'c.instructor_id' in 'field list'
+CRITICAL - 2025-10-17 13:55:53 --> ErrorException: Undefined array key "instructor_name"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\auth\dashboard.php on line 515.
+ 1 APPPATH\Views\auth\dashboard.php(515): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "instructor_name"', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php', 515)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 5 APPPATH\Controllers\Auth.php(330): view('auth/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-17 13:55:55 --> mysqli_sql_exception: Unknown column 'c.instructor_id' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id`...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id`...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id`...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id`...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Models\EnrollmentModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(259): App\Models\EnrollmentModel->getUserEnrollments('5')
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-17 13:55:55 --> Failed to fetch user enrollments: Unknown column 'c.instructor_id' in 'field list'
+CRITICAL - 2025-10-17 13:55:55 --> ErrorException: Undefined array key "instructor_name"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\auth\dashboard.php on line 515.
+ 1 APPPATH\Views\auth\dashboard.php(515): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "instructor_name"', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php', 515)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 5 APPPATH\Controllers\Auth.php(330): view('auth/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-17 13:55:56 --> mysqli_sql_exception: Unknown column 'c.instructor_id' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id`...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id`...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id`...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id`...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Models\EnrollmentModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(259): App\Models\EnrollmentModel->getUserEnrollments('5')
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-17 13:55:56 --> Failed to fetch user enrollments: Unknown column 'c.instructor_id' in 'field list'
+CRITICAL - 2025-10-17 13:55:56 --> ErrorException: Undefined array key "instructor_name"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\auth\dashboard.php on line 515.
+ 1 APPPATH\Views\auth\dashboard.php(515): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "instructor_name"', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php', 515)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 5 APPPATH\Controllers\Auth.php(330): view('auth/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-17 13:55:57 --> mysqli_sql_exception: Unknown column 'c.instructor_id' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id`...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id`...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id`...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id`...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Models\EnrollmentModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(1129): App\Models\EnrollmentModel->getUserEnrollments('5')
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->studentCourses()
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-17 13:55:57 --> Failed to fetch user enrollments: Unknown column 'c.instructor_id' in 'field list'
+ERROR - 2025-10-17 13:55:57 --> mysqli_sql_exception: Unknown column 'c.instructor_id' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id`...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id`...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id`...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id`...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Models\EnrollmentModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(259): App\Models\EnrollmentModel->getUserEnrollments('5')
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-17 13:55:57 --> Failed to fetch user enrollments: Unknown column 'c.instructor_id' in 'field list'
+CRITICAL - 2025-10-17 13:55:57 --> ErrorException: Undefined array key "instructor_name"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\auth\dashboard.php on line 515.
+ 1 APPPATH\Views\auth\dashboard.php(515): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "instructor_name"', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php', 515)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 5 APPPATH\Controllers\Auth.php(330): view('auth/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-17 13:55:57 --> mysqli_sql_exception: Unknown column 'c.instructor_id' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id`...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id`...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id`...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id`...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Models\EnrollmentModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(1129): App\Models\EnrollmentModel->getUserEnrollments('5')
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->studentCourses()
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-17 13:55:57 --> Failed to fetch user enrollments: Unknown column 'c.instructor_id' in 'field list'
+ERROR - 2025-10-17 13:55:58 --> mysqli_sql_exception: Unknown column 'c.instructor_id' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id`...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id`...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id`...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id`...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Models\EnrollmentModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(259): App\Models\EnrollmentModel->getUserEnrollments('5')
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-17 13:55:58 --> Failed to fetch user enrollments: Unknown column 'c.instructor_id' in 'field list'
+CRITICAL - 2025-10-17 13:55:58 --> ErrorException: Undefined array key "instructor_name"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\auth\dashboard.php on line 515.
+ 1 APPPATH\Views\auth\dashboard.php(515): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "instructor_name"', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php', 515)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 5 APPPATH\Controllers\Auth.php(330): view('auth/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-17 13:56:52 --> mysqli_sql_exception: Unknown column 'c.instructor_id' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id`...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id`...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id`...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id`...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Models\EnrollmentModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(259): App\Models\EnrollmentModel->getUserEnrollments('5')
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-17 13:56:52 --> Failed to fetch user enrollments: Unknown column 'c.instructor_id' in 'field list'
+CRITICAL - 2025-10-17 13:56:52 --> ErrorException: Undefined array key "instructor_name"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\auth\dashboard.php on line 515.
+ 1 APPPATH\Views\auth\dashboard.php(515): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "instructor_name"', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php', 515)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 5 APPPATH\Controllers\Auth.php(330): view('auth/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-17 13:56:57 --> mysqli_sql_exception: Unknown column 'c.instructor_id' in 'field list' in C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id`...', 0)
+#1 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id`...')
+#2 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id`...')
+#3 C:\xampp\htdocs\ITE311-MARUHOM\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id`...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MARUHOM\app\Models\EnrollmentModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MARUHOM\app\Controllers\Auth.php(259): App\Models\EnrollmentModel->getUserEnrollments('5')
+#6 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+#7 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\ITE311-MARUHOM\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-MARUHOM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-MARUHOM\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-17 13:56:57 --> Failed to fetch user enrollments: Unknown column 'c.instructor_id' in 'field list'
+CRITICAL - 2025-10-17 13:56:57 --> ErrorException: Undefined array key "instructor_name"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\auth\dashboard.php on line 515.
+ 1 APPPATH\Views\auth\dashboard.php(515): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "instructor_name"', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php', 515)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 5 APPPATH\Controllers\Auth.php(330): view('auth/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-17 13:59:28 --> ErrorException: Undefined array key "title"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\auth\dashboard.php on line 455.
+ 1 APPPATH\Views\auth\dashboard.php(455): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php', 455)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 5 APPPATH\Controllers\Auth.php(330): view('auth/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

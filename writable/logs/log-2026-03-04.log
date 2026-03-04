@@ -1,0 +1,32 @@
+CRITICAL - 2026-03-04 12:57:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "templates/header.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/header.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('templates/header', null, true)
+ 3 APPPATH\Views\auth\dashboard.php(1): CodeIgniter\View\View->include('templates/header')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-MARUHOM\\app\\Views\\auth\\dashboard.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 7 APPPATH\Controllers\Auth.php(307): view('auth/dashboard', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-03-04 13:45:46 --> mysqli_sql_exception: Duplicate column name 'phone' in C:\xampp\htdocs\MARUHOM-LIBRARY\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\MARUHOM-LIBRARY\system\Database\MySQLi\Connection.php(327): mysqli->query('ALTER TABLE `us...', 0)
+#1 C:\xampp\htdocs\MARUHOM-LIBRARY\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `us...')
+#2 C:\xampp\htdocs\MARUHOM-LIBRARY\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `us...')
+#3 C:\xampp\htdocs\MARUHOM-LIBRARY\system\Database\Forge.php(772): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `us...')
+#4 C:\xampp\htdocs\MARUHOM-LIBRARY\app\Database\Migrations\2026-03-04-090005_UpdateUsersTableForLibrary.php(12): CodeIgniter\Database\Forge->addColumn('users', Array)
+#5 C:\xampp\htdocs\MARUHOM-LIBRARY\system\Database\MigrationRunner.php(876): App\Database\Migrations\UpdateUsersTableForLibrary->up()
+#6 C:\xampp\htdocs\MARUHOM-LIBRARY\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\MARUHOM-LIBRARY\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\MARUHOM-LIBRARY\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\MARUHOM-LIBRARY\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\MARUHOM-LIBRARY\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\MARUHOM-LIBRARY\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\MARUHOM-LIBRARY\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
